@@ -7,6 +7,6 @@ $(function() {
             $("body").removeClass("sticky-header");
         }
     });
+    $('.masonry-content').lazy();
 
-   
 });
