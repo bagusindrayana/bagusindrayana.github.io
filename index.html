@@ -17,6 +17,7 @@
 		<nav> 
             <a href="#about">About</a> 
             <a href="#project">Work</a> 
+            <a href="#3d-section">3D Showcase</a> 
             <a href="#contact">Contact</a> </nav>
 	</header>
 	<div class="wrapper">
@@ -105,21 +106,142 @@
                 </div>
             </div>
 		</section>
+        <section id="3d-section">
+            <h2>3D Showcase</h2>
+            <div id="model-3d">
+                
+            </div>
+        </section>
 		<section id="contact">
 			<h2>Email</h2>
 			<p>bagusindrayana@outlook.com</p>
             <p>bagusindrayanaindo@gmail.com</p>
+            <br>
             <h2>Telp/WA/Telegram</h2>
 			<p>081545419859</p>
+            <br>
             <h2>Portofolio lain</h2>
-			<p><a href="https://www.linkedin.com/in/bagus-indrayana-8985211b7/">Linkedin</a></p>
-            <p><a href="https://github.com/bagusindrayana">Github</a></p>
+			<p><a href="https://www.linkedin.com/in/bagus-indrayana-8985211b7/" target="_blank">Linkedin</a></p>
+            <p><a href="https://github.com/bagusindrayana" target="_blank">Github</a></p>
 		</section>
 	</div>
 	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
 	<script src="./js/script.js"></script>
+
+
+    <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@v0.133.1';
+        import { GLTFLoader } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/loaders/GLTFLoader.js';
+        import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/controls/OrbitControls.js';
+        let renderer
+        let scene
+        let camera
+        let controls
+
+        function init() {
+            createRenderer()
+            scene = new THREE.Scene()
+
+            let aspect = $("#3d-section").width() / window.innerHeight
+            let d = 10
+            camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 2000)
+
+            camera.position.set(10, 10, 10)
+            camera.lookAt(scene.position)
+            controls = new OrbitControls( camera, renderer.domElement );
+            
+            scene.add(camera)
+            controls.update();
+            
+
+            createLights(scene)
+         
+
+            const loader = new GLTFLoader();
+
+            loader.load( '/model/masjid.gltf', function ( gltf ) {
+
+                scene.add( gltf.scene );
+
+            }, undefined, function ( error ) {
+
+                console.error( error );
+
+            } );
+
+            loader.load( '/model/bedug.gltf', function ( gltf ) {
+
+            scene.add( gltf.scene );
+
+            }, undefined, function ( error ) {
+
+            console.error( error );
+
+            } );
+
+            animate();
+        }
+
+        function createRenderer() {
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            })
+            renderer.setClearColor( 0xf53CFE0, 1);
+
+            renderer.setSize($("#3d-section").width(), window.innerHeight)
+            document.getElementById('model-3d').appendChild(renderer.domElement)
+        }
+
+      
+
+        function createLights(scene) {
+     
+
+            var light = new THREE.DirectionalLight(0xffffff,0.5)
+            light.position.set(20, 0, 0)
+            scene.add(light)
+
+            var light = new THREE.DirectionalLight(0xffffff)
+            light.position.set(0, 20, 0)
+            scene.add(light)
+
+            var light = new THREE.DirectionalLight(0xffffff,0.5)
+            light.position.set(-20, 0, 0)
+            scene.add(light)
+
+            var light = new THREE.DirectionalLight(0xffffff)
+            light.position.set(0, -20, 0)
+            scene.add(light)
+
+
+            var light = new THREE.DirectionalLight(0xffffff)
+            light.position.set(0, 0, 20)
+            scene.add(light)
+
+            var light = new THREE.DirectionalLight(0xffffff)
+            light.position.set(0, 0, -20)
+            scene.add(light)
+
+           
+
+        }
+
+        function animate(time) {
+            requestAnimationFrame(animate)
+            controls.update();
+            render()
+        }
+
+        function render() {
+            renderer.render(scene, camera)
+        }
+
+        init()
+        
+        
+    </script>
 </body>
 
 </html>

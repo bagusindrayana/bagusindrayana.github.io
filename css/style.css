@@ -288,6 +288,12 @@ body.sticky-header header h1 {
 	width: 50px;
 }
 
+#model-3d {
+	width: 100%;
+}
+
+
+
 @media all and (max-width: 767px) {
 	.carousel-container #carousel-thumbs img {
 		border-width: 3px;
@@ -305,3 +311,4 @@ body.sticky-header header h1 {
 		background: #ccccce;
 	}
 }
+
