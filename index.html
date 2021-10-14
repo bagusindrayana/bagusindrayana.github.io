@@ -139,10 +139,14 @@
         let scene
         let camera
         let controls
+        let mesh;
+        let mixer
+        let clock
 
         function init() {
             createRenderer()
             scene = new THREE.Scene()
+            clock = new THREE.Clock()
 
             let aspect = $("#3d-section").width() / window.innerHeight
             let d = 10
@@ -180,6 +184,25 @@
             console.error( error );
 
             } );
+
+            // loader.load( '/model/cube.gltf', function ( gltf ) {
+
+            //     var model = gltf.scene;
+            //     var animations = gltf.animations;
+
+            //     scene.add( model );
+            //     mixer = new THREE.AnimationMixer( model );
+
+            //     var action = mixer.clipAction( animations[ 0 ] ); // access first animation clip
+            //     action.play();
+
+            // }, undefined, function ( error ) {
+
+            //     console.error( error );
+
+            // } );
+
+           
 
             animate();
         }
@@ -231,6 +254,9 @@
         function animate(time) {
             requestAnimationFrame(animate)
             controls.update();
+            var delta = clock.getDelta(); // clock is an instance of THREE.Clock
+            if ( mixer ) mixer.update( delta );
+
             render()
         }
 
