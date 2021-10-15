@@ -9,6 +9,7 @@ let controls;
 let mesh;
 let mixer;
 let clock;
+let manager;
 
 
 
@@ -16,6 +17,13 @@ function init() {
     createRenderer()
     scene = new THREE.Scene()
     clock = new THREE.Clock()
+    manager = new THREE.LoadingManager();
+    manager.onLoad = function ( ) {
+
+        $("#animation-section").find(".lds-ripple").hide();
+    
+    };
+    
 
     let aspect = $("#animation-section").width() / window.innerHeight
     camera = new THREE.PerspectiveCamera( 45, aspect, 5, 100 );
@@ -30,7 +38,7 @@ function init() {
     createLights(scene)
     
 
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(manager );
 
     
 
@@ -45,7 +53,7 @@ function init() {
         var action = mixer.clipAction( animations[ 0 ] ); // access first animation clip
         action.play();
 
-    }, undefined, function ( error ) {
+    },undefined, function ( error ) {
 
         console.error( error );
 

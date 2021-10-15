@@ -9,6 +9,7 @@ let controls;
 let mesh;
 let mixer;
 let clock;
+let manager;
 
 
 
@@ -16,6 +17,12 @@ function init() {
     createRenderer()
     scene = new THREE.Scene()
     clock = new THREE.Clock()
+    manager = new THREE.LoadingManager();
+    manager.onLoad = function ( ) {
+
+        $("#3d-section").find(".lds-ripple").hide();
+    
+    };
 
     let aspect = $("#3d-section").width() / window.innerHeight
     let d = 10
@@ -32,7 +39,7 @@ function init() {
     createLights(scene)
     
 
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(manager);
 
     loader.load( '/model/masjid.gltf', function ( gltf ) {
 
