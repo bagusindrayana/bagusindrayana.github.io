@@ -292,6 +292,10 @@ body.sticky-header header h1 {
 	width: 100%;
 }
 
+#animation-3d {
+	width: 100%;
+}
+
 
 
 @media all and (max-width: 767px) {
