@@ -175,7 +175,7 @@
 
                 const loader = new GLTFLoader(manager);
 
-                loader.load( '/model/isometric_test_ground.gltf', function ( gltf ) {
+                loader.load( 'model/isometric_test_ground.gltf', function ( gltf ) {
                     var model = gltf.scene;
                     model.traverse( function ( object ) {
 
@@ -194,7 +194,7 @@
 
                 } );
 
-                loader.load( '/model/isometric_test_booth.gltf', function ( booth ) {
+                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
                     booth.scene.position.set(-1,0,-1.5)
                     booth.scene.traverse( function ( object ) {
 
@@ -238,7 +238,7 @@
 
                 } );
 
-                loader.load( '/model/isometric_test_booth.gltf', function ( booth ) {
+                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
                     booth.scene.position.set(1.5,0,0)
                     booth.scene.traverse( function ( object ) {
 
@@ -283,7 +283,7 @@
                 } );
 
 
-                loader.load( '/model/isometric_test_booth.gltf', function ( booth ) {
+                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
                     booth.scene.position.set(0,0,2)
                     booth.scene.traverse( function ( object ) {
 
