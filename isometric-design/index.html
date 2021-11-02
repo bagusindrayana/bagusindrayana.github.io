@@ -184,7 +184,7 @@
 
                 const loader = new GLTFLoader(manager);
 
-                loader.load( '/model/isometric_base.gltf', function ( gltf ) {
+                loader.load( 'model/isometric_base.gltf', function ( gltf ) {
                     var model = gltf.scene;
                     // model.traverse( function ( object ) {
 
@@ -203,7 +203,7 @@
 
                 } );
 
-                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                loader.load( 'model/isometric_enter_popup.gltf', function ( booth ) {
                     booth.scene.position.set(-6,0,2)
                     booth.scene.traverse( function ( object ) {
 
@@ -257,7 +257,7 @@
 
                 } );
 
-                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                loader.load( 'model/isometric_enter_popup.gltf', function ( booth ) {
                     booth.scene.position.set(-5.5,0,-1)
                     // booth.scene.traverse( function ( object ) {
 
@@ -304,7 +304,7 @@
                 } );
 
 
-                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                loader.load( 'model/isometric_enter_popup.gltf', function ( booth ) {
                     booth.scene.position.set(-3.5,0,-1)
                     scene.add(booth.scene);
                     var animations = booth.animations;
@@ -327,7 +327,7 @@
                 } );
 
 
-                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                loader.load( 'model/isometric_enter_popup.gltf', function ( booth ) {
                     booth.scene.position.set(-4,0,2)
                     scene.add(booth.scene);
                     var animations = booth.animations;
