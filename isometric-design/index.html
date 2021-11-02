@@ -334,9 +334,10 @@
                 function onDocumentMouseDown( event ) 
                 {
                     event.preventDefault();
+                    var rect = renderer.domElement.getBoundingClientRect();
                     var mouse = new THREE.Vector2();
-                    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-                    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+                    mouse.x =( ( event.clientX - rect.left ) / ( rect.right - rect.left ) ) * 2 - 1;
+                    mouse.y = - ( ( event.clientY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
                     var raycaster = new THREE.Raycaster();
                     raycaster.setFromCamera( mouse, camera );               
                     //var intersects = raycaster.intersectObjects( booths );   
@@ -366,10 +367,10 @@
                 }
                 
                 function onDocumentMouseMove(event) {
-
-                            var mouse = new THREE.Vector2();
-                    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-                    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+                    var rect = renderer.domElement.getBoundingClientRect();
+                    var mouse = new THREE.Vector2();
+                    mouse.x =( ( event.clientX - rect.left ) / ( rect.right - rect.left ) ) * 2 - 1;
+                    mouse.y = - ( ( event.clientY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
                     var raycaster = new THREE.Raycaster();
                     raycaster.linePrecision = 0.1;
                     raycaster.setFromCamera( mouse, camera );
