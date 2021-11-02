@@ -66,7 +66,7 @@
         </nav>
 
         <section id="3d-section">
-            <div class="row justify-content-center" style="min-height: 100vh;background-color: #53cfe0;">
+            <div class="row justify-content-center" style="min-height: 100vh;background-color: #d6d6d6;">
                 <div class="lds-ripple"><div></div><div></div></div>
                 <div class="col-12"  id="model-3d" style="min-height: 100vh;">
                     
@@ -110,6 +110,8 @@
             import * as THREE from 'https://cdn.skypack.dev/three@v0.133.1';
             import { GLTFLoader } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/loaders/GLTFLoader.js';
             import { OrbitControls } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/controls/OrbitControls.js';
+            import { RoomEnvironment } from 'https://cdn.skypack.dev/three@v0.133.1/examples/jsm/environments/RoomEnvironment.js';
+           
 
             var myModal = new bootstrap.Modal(document.getElementById('infoBooth'))
 
@@ -126,8 +128,9 @@
 
 
             function init() {
-                createRenderer()
+                
                 scene = new THREE.Scene()
+                createRenderer(scene);
                 clock = new THREE.Clock()
                 manager = new THREE.LoadingManager();
                 manager.onLoad = function ( ) {
@@ -141,7 +144,7 @@
                 var width  = $("#model-3d").width();
                 var height  = window.innerHeight;
                 //camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 2000)
-                var zoom = 300;
+                var zoom = 150;
                 camera = new THREE.OrthographicCamera( width / - zoom,width / zoom, height / zoom, height / - zoom, 1, 1000 );
                 
                 camera.position.set(10, 10, 10)
@@ -152,20 +155,26 @@
                 scene.add(camera)
                 controls.update();
 
-                const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
-				hemiLight.position.set( 0, 20, 0 );
-				scene.add( hemiLight );
 
-				const dirLight = new THREE.DirectionalLight( 0xffffff );
-				dirLight.position.set( 3, 10, 10 );
-				dirLight.castShadow = true;
-				dirLight.shadow.camera.top = 2;
-				dirLight.shadow.camera.bottom = - 2;
-				dirLight.shadow.camera.left = - 2;
-				dirLight.shadow.camera.right = 2;
-				dirLight.shadow.camera.near = 0.1;
-				dirLight.shadow.camera.far = 40;
-				scene.add( dirLight );
+                // const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
+				// hemiLight.position.set( 0, 20, 0 );
+				// scene.add( hemiLight );
+
+				// const dirLight = new THREE.DirectionalLight( 0xffffff );
+				// dirLight.position.set( 0, 2, 4 );
+                // dirLight.intensity = 3;
+				// // dirLight.castShadow = true;
+				// // dirLight.shadow.camera.top = 2;
+				// // dirLight.shadow.camera.bottom = - 2;
+				// // dirLight.shadow.camera.left = - 2;
+				// // dirLight.shadow.camera.right = 2;
+				// // dirLight.shadow.camera.near = 0.1;
+				// // dirLight.shadow.camera.far = 40;
+				// scene.add( dirLight );
+
+                // const dirLight2 = new THREE.DirectionalLight( 0xffffff );
+                // dirLight2.position.set( 3, 3, 0 );
+				// scene.add( dirLight2 );
 
       
             
@@ -175,16 +184,16 @@
 
                 const loader = new GLTFLoader(manager);
 
-                loader.load( 'model/isometric_test_ground.gltf', function ( gltf ) {
+                loader.load( '/model/isometric_base.gltf', function ( gltf ) {
                     var model = gltf.scene;
-                    model.traverse( function ( object ) {
+                    // model.traverse( function ( object ) {
 
-                        if ( object.isMesh){
-                            object.receiveShadow = true;
-                        }
+                    //     if ( object.isMesh){
+                    //         object.receiveShadow = true;
+                    //     }
                             
 
-                    } );
+                    // } );
                     scene.add(model);
         
 
@@ -194,12 +203,17 @@
 
                 } );
 
-                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
-                    booth.scene.position.set(-1,0,-1.5)
+                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                    booth.scene.position.set(-6,0,2)
                     booth.scene.traverse( function ( object ) {
 
-                        if ( object.isMesh )
-                            object.castShadow = true;
+                        if ( object.isMesh ){
+                            // object.castShadow = true;
+                            // object.cursor = 'pointer';
+                            // object.on('mousedown', onDocumentMouseDown);
+                            // object.on('mousemove', onDocumentMouseMove);
+                        }
+                            
 
                     } );
                     scene.add(booth.scene);
@@ -211,26 +225,31 @@
                     action.clampWhenFinished = true;
                     action.play();
                     booths.push(booth.scene);
+                    
                     booth.scene.boothData = {name:"Booth 1",image:"https://picsum.photos/seed/"+Math.floor(Math.random() * 100)+"/300/300"};
 
-                    const loader = new THREE.TextureLoader();
+                    // const loader = new THREE.TextureLoader();
 
-                    loader.load(
-                        booth.scene.boothData.image,
-                        function ( texture ) {
+                    // loader.load(
+                    //     booth.scene.boothData.image,
+                    //     function ( texture ) {
                         
-                            booth.scene.children[0].children[1].material.map =texture;
-                            booth.scene.children[0].children[1].material.needsUpdate = true;
-                            document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-                            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-                        },
-                        // onProgress callback currently not supported
-                        undefined,
-                        // onError callback
-                        function ( err ) {
-                            console.error( 'An error happened.' );
-                        }
-                    );
+                    //         booth.scene.children[0].children[1].material.map =texture;
+                    //         booth.scene.children[0].children[1].material.needsUpdate = true;
+                            
+                    //     },
+                    //     // onProgress callback currently not supported
+                    //     undefined,
+                    //     // onError callback
+                    //     function ( err ) {
+                    //         console.error( 'An error happened.' );
+                    //     }
+                    // );
+
+                    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+                   
                     
                 }, undefined, function ( error ) {
 
@@ -238,14 +257,14 @@
 
                 } );
 
-                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
-                    booth.scene.position.set(1.5,0,0)
-                    booth.scene.traverse( function ( object ) {
+                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                    booth.scene.position.set(-5.5,0,-1)
+                    // booth.scene.traverse( function ( object ) {
 
-                        if ( object.isMesh )
-                            object.castShadow = true;
+                    //     if ( object.isMesh )
+                    //         object.castShadow = true;
 
-                    } );
+                    // } );
                 
                     scene.add(booth.scene);
                     var animations = booth.animations;
@@ -254,27 +273,29 @@
                     action.loop = THREE.LoopOnce;
                     action.clampWhenFinished = true;
                     action.play();
-                    booths.push(booth.scene);
+                   
                     booth.scene.boothData = {name:"Booth 2",image:"https://picsum.photos/seed/"+Math.floor(Math.random() * 100)+"/300/300"};
 
-                    const loader = new THREE.TextureLoader();
+                    // const loader = new THREE.TextureLoader();
 
-                    loader.load(
-                        booth.scene.boothData.image,
-                        function ( texture ) {
+                    // loader.load(
+                    //     booth.scene.boothData.image,
+                    //     function ( texture ) {
                         
-                            booth.scene.children[0].children[1].material.map =texture;
-                            booth.scene.children[0].children[1].material.needsUpdate = true;
-                            document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-                            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-                        },
-                        // onProgress callback currently not supported
-                        undefined,
-                        // onError callback
-                        function ( err ) {
-                            console.error( 'An error happened.' );
-                        }
-                    );
+                    //         booth.scene.children[0].children[1].material.map =texture;
+                    //         booth.scene.children[0].children[1].material.needsUpdate = true;
+                    //         document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                    //         document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                    //     },
+                    //     // onProgress callback currently not supported
+                    //     undefined,
+                    //     // onError callback
+                    //     function ( err ) {
+                    //         console.error( 'An error happened.' );
+                    //     }
+                    // );
+                    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
                     
                 }, undefined, function ( error ) {
 
@@ -283,50 +304,51 @@
                 } );
 
 
-                loader.load( 'model/isometric_test_booth.gltf', function ( booth ) {
-                    booth.scene.position.set(0,0,2)
-                    booth.scene.traverse( function ( object ) {
-
-                        if ( object.isMesh )
-                            object.castShadow = true;
-
-                    } );
-              
+                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                    booth.scene.position.set(-3.5,0,-1)
                     scene.add(booth.scene);
                     var animations = booth.animations;
-                   
-
-                    var action = mixer.clipAction( animations[ 0 ] ,booth.scene); // access first animation clip
+                    
+                    var action = mixer.clipAction( animations[ 0 ],booth.scene); // access first animation clip
                     action.loop = THREE.LoopOnce;
                     action.clampWhenFinished = true;
                     action.play();
                     booths.push(booth.scene);
+               
                     booth.scene.boothData = {name:"Booth 3",image:"https://picsum.photos/seed/"+Math.floor(Math.random() * 100)+"/300/300"};
 
-                    const loader = new THREE.TextureLoader();
-
-                    loader.load(
-                        booth.scene.boothData.image,
-                        function ( texture ) {
-                        
-                            booth.scene.children[0].children[1].material.map =texture;
-                            booth.scene.children[0].children[1].material.needsUpdate = true;
-                            document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-                            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-                        },
-                        // onProgress callback currently not supported
-                        undefined,
-                        // onError callback
-                        function ( err ) {
-                            console.error( 'An error happened.' );
-                        }
-                    );
+                    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
                     
                 }, undefined, function ( error ) {
 
                     console.error( error );
 
                 } );
+
+
+                loader.load( '/model/isometric_enter_popup.gltf', function ( booth ) {
+                    booth.scene.position.set(-4,0,2)
+                    scene.add(booth.scene);
+                    var animations = booth.animations;
+                    
+                    var action = mixer.clipAction( animations[ 0 ],booth.scene); // access first animation clip
+                    action.loop = THREE.LoopOnce;
+                    action.clampWhenFinished = true;
+                    action.play();
+                    booths.push(booth.scene);
+                    booth.scene.boothData = {name:"Booth 4",image:"https://picsum.photos/seed/"+Math.floor(Math.random() * 100)+"/300/300"};
+
+                    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+                    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                    
+                }, undefined, function ( error ) {
+
+                    console.error( error );
+
+                } );
+
+                
             
                 
 
@@ -340,12 +362,14 @@
                     mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
                     var raycaster = new THREE.Raycaster();
                     raycaster.setFromCamera( mouse, camera );               
-                    var intersects = raycaster.intersectObjects( booths );                  
+                    //var intersects = raycaster.intersectObjects( booths );   
+                    
+                    const intersects = raycaster.intersectObjects( scene.children );
 
                     var matched_marker = null;
                     if(intersects.length > 0)
                     {
-                        //$('html,body').css('cursor','pointer');//mouse cursor change
+                        // $('html,body').css('cursor','pointer');//mouse cursor change
                         for ( var i = 0;  intersects.length > 0 && i < intersects.length; i++)
                         {
                             if(intersects[0].object.parent.parent.boothData != undefined){
@@ -370,26 +394,43 @@
                     mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
                     mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
                     var raycaster = new THREE.Raycaster();
+                    raycaster.linePrecision = 0.1;
                     raycaster.setFromCamera( mouse, camera );
-                            var intersects = raycaster.intersectObjects( booths );
+                    var intersects = raycaster.intersectObjects( scene.children  );
                     
                     if(intersects.length > 0) {
-                        $('html,body').css('cursor', 'pointer');
+                        for ( var i = 0;  intersects.length > 0 && i < intersects.length; i++)
+                        {
+                            if(intersects[0].object.parent.parent.boothData != undefined){
+                                $('html,body').css('cursor', 'pointer');
+                            } else {
+                                $('html,body').css('cursor', 'default');
+                            }
+                                
+                    
+                        }
+                       
                     } else {
-                            $('html,body').css('cursor', 'default');
+                        
                     }
 
                     }
             }
 
-            function createRenderer() {
+            function createRenderer(scene) {
                 renderer = new THREE.WebGLRenderer({
                     antialias: true
                 })
-                renderer.setClearColor( 0xf53CFE0, 1);
-                renderer.shadowMap.enabled = true;
+                renderer.outputEncoding = THREE.sRGBEncoding;
+                // renderer.setClearColor( 0xfd6d6d6, 1);
+                // renderer.shadowMap.enabled = true;
+                const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
-                renderer.setSize($("#model-3d").width(), window.innerHeight)
+            
+                scene.background = new THREE.Color( 0xfd6d6d6 );
+                scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+
+                renderer.setSize(window.innerWidth, window.innerHeight)
                 document.getElementById('model-3d').appendChild(renderer.domElement)
             }
 
