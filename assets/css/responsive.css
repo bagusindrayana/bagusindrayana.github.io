@@ -119,15 +119,7 @@
 
     }
 
-    .biodata .col-4 {
-       
-        display: block;
-        justify-content: unset;
-        align-content: unset;
-        align-items: unset;
-     
-        
-    }
+ 
     
     .biodata .col-8 {
         display: block;
