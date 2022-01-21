@@ -1,0 +1,323 @@
+
+@media only screen and (max-width: 1600px) {
+    .hide-xl {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .hide-lg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .hide-md {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 1.5rem !important;
+        
+    }
+    .morse-left,
+    .morse-right,
+    .section-left,
+    .section-rigth {
+        display: none;
+    }
+
+    .loading-text {
+        font-size: 12px;
+    }
+
+    .bg-mobile {
+        display: block;
+    }
+
+    .side-nav {
+        right: 0px !important;
+    }
+
+    .image-glitch {
+        width: 150px !important;
+        height: 200px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .biodata {
+        margin-top: 50px;
+        
+    }
+    .box {
+        margin-top: 50px;
+
+    }
+    .biodata ul {
+
+        font-size: 1rem;
+
+    }
+
+    .bg-animasi .barcode {
+
+        width: 275px;
+        height: 100px;
+ 
+    }
+
+    .circle {
+
+
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .circle span {
+
+        width: 150px;
+        height: 150px;
+
+    }
+    
+
+    .bg-animasi .text {
+
+
+        font-size: 2rem;
+    }
+
+    .border-shape {
+        
+        height: 80%;
+        clip-path: polygon(100% 0, 100% 83%, 93% 100%, 0 100%, 0 0);
+
+    }
+    
+    .content-shape {
+        clip-path: polygon(100% 0, 100% 83%, 93% 100%, 0 100%, 0 0);
+
+    
+    }
+
+    .biodata {
+        margin-top: 20px;
+        
+    }
+    
+    .biodata ul li {
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin:10px;
+
+    }
+    body {
+        letter-spacing: 5px;
+    }
+    h2 {
+        font-size: 4rem;
+        height: 5rem;
+        
+    }
+    h4 {
+        font-size: 1.3rem;
+        border: 4px solid #FFF;
+        padding: 0.5rem 1rem;
+    }
+    section .container,
+    header .container,
+    footer .container {
+        margin-top: 0px;
+        padding: 5%;
+        width: 85%;
+        height: 95%;
+    }
+
+    .stripes {
+        height: 100px;
+    }
+
+    .stripes-bg {
+        height: 125px;
+    }
+
+    .row.project .col-2 {
+        overflow-x: unset;
+    }
+
+    ul.folder-list {
+
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .folder__back {
+  
+        width: 70px;
+        height: 50px;
+
+    }
+
+    .row.project {
+        flex-direction: row;
+    }
+
+    .folder-parent {
+        font-size: 12px;
+     
+    }
+
+    ul.folder-list li {
+        margin: 10px;
+        
+    }
+
+    .row.project .col-10 {
+        min-height: 60vh;
+        max-height: 65vh;
+    }
+
+    .row.project .col-10 .box {
+        max-height: 75%;
+    }
+
+    .box {
+        margin-top: 25px;
+    }
+
+    .box-content .list-item {
+        width: calc(25% - 15px);
+        height: 200px;
+
+    }
+
+    #mouse-tooltip {
+
+        font-size: 14px;
+        width: 200px;
+        
+    
+    }
+
+
+    .bg-animasi .barcode {
+        bottom: unset;
+        top: 55%;
+        left: 20%;
+        
+    }
+
+    .jajar-genjang {
+
+        width: 300px;
+        height: 100px;
+
+    }
+
+    .bg-animasi .circle {
+        top: 5%;
+        left: 15%;
+        
+    }
+
+    @keyframes animCircle {
+        0% {
+            top: 5%;
+            left: 15%;
+        }
+    
+        100% {
+            top: 10%;
+            left: 25%;
+        }
+    
+    
+    }
+
+  
+
+    /* For desktop: */
+    .col-1 {
+        width: calc(8.33% - 10px);
+    }
+
+    .col-2 {
+        width: calc(16.66% - 10px);
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: calc(33.33% - 10px);
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: calc(50% - 10px);
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: calc(66.66% - 10px);
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: calc(83.33% - 10px);
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .contact.row .col-6 ul li {
+        font-size: 2rem;
+        
+    }
+
+    .skill.row .col-6 ul li {
+        font-size: 2rem;
+        
+    }
+
+    .biodata .col-4 {
+       
+        display: block;
+        justify-content: unset;
+        align-content: unset;
+        align-items: unset;
+     
+        
+    }
+    
+    .biodata .col-8 {
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+    }
+    
+}

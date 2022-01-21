@@ -1,149 +1,729 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Bagus Indrayana">
-    <meta name="keywords" content="Bagus Indrayana">
-    <meta name="author" content="Bagus Indrayana">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bagus Indrayana</title>
-    <link rel="stylesheet" href="./css/style.css">
-	
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bagus Indrayana</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
-<body translate="no" class="sticky-header">
-	<header>
-		<h1>Hublaaaaaa!!!</h1>
-		<nav> 
-            <a href="#about">About</a> 
-            <a href="#project">Work</a> 
-            <a href="#3d-section">3D Showcase</a> 
-            <a href="#contact">Contact</a> </nav>
-	</header>
-	<div class="wrapper">
-		<section id="about">
-			<h2>Biodata</h2>
-			<p>
-                Nama : Bagus Indrayana
-            </p>
-            <p>
-                Tempat tanggal lahir : Grobogan,15 Mei 2001
-            </p>
-            <p>
-                Pendidikan terakhir : SMK, dan sekarang sedang menempuh pendidikan S1
-            </p>
-            <p>
-                Teknologi/Skill : HTML,CSS,JS,LARAVEL
-            </p>
-		</section>
-		<section id="project">
-            <h2>My Work</h2>
-			<div class="masonry-wrapper">
-                <div class="masonry">
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/covid-min.png" alt="Web Informasi Covid-19 Memanfaatkan REST APIe" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Web Informasi Covid-19 Memanfaatkan REST API
-                        </span>
-                    </div>
-                    <div class="masonry-item">
-                    <img data-src="./images/aplikasi/tertular-min.png" alt="Dummy Image" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Sistem Informasi Pendataan Lokasi Sebaran Pasian Covid-19 Dengan Laravel
-                        </span>
-                    </div>
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/goblog-min.png" alt="Simple Blog System Dengan Laravel" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Simple Blog System Dengan Laravel
-                        </span>
-                    </div>
+<body>
+  <div class="loading-wrapper" id="loading">
+    <div class="bg-mobile">
+      <div class="big-slash">
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+      </div>
+    </div>
+    <div class="loading-text" animasi-tulisan="LOADING"></div>
+    <div class="loading-animation">
 
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/kasir-min.png" alt="Aplikasi Kasir Dengan Laravel" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Aplikasi Kasir Dengan Laravel
-                        </span>
-                    </div>
+      <div class="box-left"></div>
+      <div class="box-right"></div>
+      <div class="morse-left">
 
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/akuntasi-min.png" alt="Aplikasi Akuntasi Dengan Laravel" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Aplikasi Akuntasi Dengan Laravel
-                        </span>
-                    </div>
+        <div class="dot hide-lg hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dash hide-lg  hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dash hide-lg  hide-xl"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dot hide-md"></div>
+        <div class="dash hide-md"></div>
+        <div class="dot hide-md"></div>
+        <div class="dash hide-md"></div>
+        <div class="dot hide-md"></div>
+        <div class="dot hide-md"></div>
 
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/inventaris-min.png" alt="Aplikasi Inventory Dengan Laravel" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Aplikasi Inventory Dengan Laravel
-                        </span>
-                    </div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
 
-                    <div class="masonry-item">
-                        <img data-src="./images/game/horro-game-min.png" alt="Horror Game Dengan Unity3D" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Horror Game Dengan Unity3D
-                        </span>
-                    </div>
-                    <div class="masonry-item">
-                        <img data-src="./images/game/ar-min.png" alt="AR Content Dengan Unity3D" class="masonry-content">
-                        <span class="img-content-hover" >
-                            AR Content Dengan Unity3D
-                        </span>
-                    </div>
 
-                    <div class="masonry-item">
-                        <img data-src="./images/aplikasi/kuesioner-min.png" alt="Aplikasi Kuesioner Android Dengan Kotlin" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Aplikasi Kuesioner Android Dengan Kotlin
-                        </span>
-                    </div>
+      </div>
+      <div class="morse-right">
 
-                    <div class="masonry-item">
-                        <img data-src="./images/game/box-min.png" alt="" class="masonry-content">
-                        <span class="img-content-hover" >
-                            Dungeon Crawler Game Dengan Unity3D
-                        </span>
-                    </div>
+
+        <div class="dot hide-lg hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dash hide-lg  hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dot hide-lg  hide-xl"></div>
+        <div class="dash hide-lg  hide-xl"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dash hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dot hide-lg"></div>
+        <div class="dot hide-md"></div>
+        <div class="dash hide-md"></div>
+        <div class="dot hide-md"></div>
+        <div class="dash hide-md"></div>
+        <div class="dot hide-md"></div>
+        <div class="dot hide-md"></div>
+
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+        <div class="slash"></div>
+
+      </div>
+      <div class="section-rigth">
+        <div class="path cancel-path"></div>
+        <div class="path triangle-path"></div>
+        <div class="bar-small"></div>
+        <div class="path triangle-path" style="transform: rotateZ(180deg);"></div>
+        <div class="bar-medium"></div>
+        <div class="path cancel-path"></div>
+        <div class="bar-medium hide-lg"></div>
+        <div class="path circle-path hide-lg"></div>
+        <div class="path triangle-path hide-lg" style="transform: rotateZ(180deg);"></div>
+      </div>
+      <div class="section-left">
+        <div class="path triangle-path"></div>
+        <div class="path circle-path"></div>
+
+        <div class="bar-small"></div>
+        <div class="path triangle-path" style="transform: rotateZ(180deg);"></div>
+        <div class="bar-medium "></div>
+        <div class="path triangle-path hide-lg"></div>
+        <div class="path cancel-path hide-lg"></div>
+        <div class="bar-medium hide-lg"></div>
+
+        <div class="path cancel-path"></div>
+
+      </div>
+    </div>
+
+  </div>
+  <div id="mouse-tooltip"></div>
+  <ul class="side-nav">
+    <li data-page="#page1" tooltip="HOME" class="active"><a href="#"><span></span></a></li>
+    <li data-page="#page2" tooltip="PROFILE"><a href="#"><span></span></a></li>
+    <li data-page="#page3" tooltip="PROJECT"><a href="#"><span></span></a></li>
+    <li data-page="#page4" tooltip="SKILL"><a href="#"><span></span></a></li>
+    <li data-page="#page5" tooltip="CONTACT"><a href="#"><span></span></a></li>
+  </ul>
+
+
+
+  <div id="full-page">
+    <section class="active" id="page1">
+      <div class="bg-animasi">
+        <p class="text" style="left: 10%;bottom: 10%;"></p>
+        <p class="text" style="right: 10%;top: 10%;"></p>
+        <div class="anim-1" style="top: 20%;">
+          <div class="cancel-path"></div>
+        </div>
+
+        <div class="anim-2" style="bottom: 30%;">
+          <div class="triangle-path"></div>
+        </div>
+
+        <div class="barcode">
+          <div class="big-slash">
+            <div class="slash"></div>
+            <div class="slash"></div>
+            <div class="slash"></div>
+            <div class="slash"></div>
+            <div class="slash"></div>
+            <div class="slash"></div>
+          </div>
+        </div>
+
+        <div class="jajar-genjang"></div>
+
+        <div class="circle">
+          <span></span>
+        </div>
+
+        <div class="anim-3">
+          <div class="cancel-path"></div>
+        </div>
+      </div>
+      <div class="container">
+        <h2 animasi-tulisan="WELCOME TO MY WEBSITE"></h2>
+        <div class="mouse">
+          <div class="mouse-shape">
+            <div class="mouse-animation"></div>
+          </div>
+          <div class="mouse-msg" animasi-tulisan="KEEP SCROLL"></div>
+        </div>
+      </div>
+    </section>
+    <section id="page2">
+
+      <div class="container">
+        <h4>PERSONAL INFORMATION</h4>
+
+        <div class="border-shape">
+          <div class="content-shape">
+            <div class="row biodata">
+              <div class="col-4">
+                <div class="lds-dual-ring"></div>
+                <div class="image-glitch">
+                  <div class="image-distortion" id="base" style="background-image: url('./assets/images/image.jpg');">
+                  </div>
+                  <div class="image-distortion" id="red" style="background-image: url('./assets/images/image.jpg');">
+                  </div>
+                  <div class="image-distortion" id="cyan" style="background-image: url('./assets/images/image.jpg');">
+                  </div>
+                  <div class="image-distortion" id="transparent"
+                    style="background-image: url('./assets/images/image.jpg');"></div>
                 </div>
-            </div>
-		</section>
-        <section id="3d-section">
-            <h2>3D Showcase</h2>
-            <div class="lds-ripple"><div></div><div></div></div>
-            <div id="model-3d">
-                
-            </div>
-        </section>
+              </div>
+              <div class="col-8">
+                <ul>
+                  <li>
+                    NAME : <span animasi-tulisan="BAGUS INDRAYANA">..........</span>
+                  </li>
+                  <li>
+                    BORN : <span animasi-tulisan="GROBOGAN, 15 MAY 2001">.........</span>
+                  </li>
+                  <li>
+                    ADDRESS : <span animasi-tulisan="SAMARINDA, EAST KALIMANTAN">.........</span>
+                  </li>
 
-        <section id="animation-section">
-            <h2>3D Animation Showcase</h2>
-            <div class="lds-ripple"><div></div><div></div></div>
-            <div id="animation-3d">
-                
-            </div>
-        </section>
-		<section id="contact">
-			<h2>Email</h2>
-			<p>bagusindrayana@outlook.com</p>
-            <p>bagusindrayanaindo@gmail.com</p>
-            <br>
-            <h2>Whatsapp</h2>
-			<p>081545419859</p>
-            <br>
-            <h2>Portofolio lain</h2>
-			<p><a href="https://www.linkedin.com/in/bagus-indrayana-8985211b7/" target="_blank">Linkedin</a></p>
-            <p><a href="https://github.com/bagusindrayana" target="_blank">Github</a></p>
-		</section>
-	</div>
-	
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./js/jquery.lazy.min.js"></script>
-	<script src="./js/script.js"></script>
-    <script type="module" src="/js/3d-model.js"></script>
-    <script type="module" src="/js/3d-animation.js"></script>
+                </ul>
+                <div class="box">
+                  <h4>STATUS</h4>
+                  <div class="stripes">
+                    <div class="stripes-bg">
 
+                    </div>
+                    <span class="status" animasi-tulisan="STUDENT"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="page3">
+      <div class="container">
+        <h4>PROJECT & WORK</h4>
+        <div class="border-shape">
+          <div class="content-shape">
+            <div class="row project">
+              <div class="col-2">
+                <ul class="folder-list">
+                  <li data-target="#project-web" class="selected">
+                    <div class="folder-parent">
+                      <div class="folder">
+                        <div class="folder__back">
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="folder__front"></div>
+                          <div class="folder__front right"></div>
+                        </div>
+                      </div>
+                      <span>WEB</span>
+                    </div>
+
+                  </li>
+                  <li data-target="#project-mobile">
+                    <div class="folder-parent">
+                      <div class="folder">
+                        <div class="folder__back">
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="folder__front"></div>
+                          <div class="folder__front right"></div>
+                        </div>
+                      </div>
+                      <span>MOBILE</span>
+                    </div>
+                  </li>
+                  <li data-target="#project-game">
+                    <div class="folder-parent">
+                      <div class="folder">
+                        <div class="folder__back">
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="folder__front"></div>
+                          <div class="folder__front right"></div>
+                        </div>
+                      </div>
+                      <span>GAME</span>
+                    </div>
+                  </li>
+                  <li data-target="#project-library">
+                    <div class="folder-parent">
+                      <div class="folder">
+                        <div class="folder__back">
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="paper"></div>
+                          <div class="folder__front"></div>
+                          <div class="folder__front right"></div>
+                        </div>
+                      </div>
+                      <span>LIBRARY</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-10">
+                <div class="box">
+                  <div class="loading-bar">
+                    <div class="loading-bg">
+                      <div class="loading-fill"></div>
+                    </div>
+                  </div>
+                  <div class="box-content" id="project-web">
+                    <a href="https://isometric-web.netlify.app/" target="_blank" class="list-item"
+                      style="background-image: url('./assets/images/web_isometric.png');"
+                      tooltip="ISOMETRIC WEB DESIGN">
+
+                    </a>
+                    <a href="https://laravel-maps-demo.herokuapp.com/" target="_blank" class="list-item"
+                      style="background-image: url('./assets/images/laravel_maps_demo.png');"
+                      tooltip="LARAVEL MAPS DEMO">
+
+                    </a>
+
+                  </div>
+                  <div class="box-content" id="project-mobile">
+                    <a href="https://github.com/bagusindrayana/notes_lites" target="_blank" class="list-item"
+                      style="background-image: url('./assets/images/notes_lite.png');" tooltip="NOTES LITE">
+
+                    </a>
+                  </div>
+                  <div class="box-content" id="project-game">
+                    <a href="https://gamejolt.com/games/EscapeLabyrinth/274630" target="_blank" class="list-item"
+                      style="background-image: url('./assets/images/escape_labyrinth.webp');"
+                      tooltip="ESCAPE LABYRINTH">
+
+                    </a>
+                    <a href="https://gamejolt.com/games/box-dungeon/467487" target="_blank" class="list-item"
+                      style="background-image: url('./assets/images/box_dungeon.webp');" tooltip="BOX DUNGEON">
+
+                    </a>
+                  </div>
+                  <div class="box-content" id="project-library">
+                    <a href="https://github.com/bagusindrayana/laravel-maps" target="_blank" class="list-item"
+                      tooltip="LARAVEL MAPS">
+                      LARAVEL MAPS
+                    </a>
+                    <a href="https://github.com/bagusindrayana/laravel-coordinate" target="_blank" class="list-item"
+                      tooltip="LARAVEL COORDINATE">
+                      LARAVEL COORDINATE
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="page4">
+      <div class="bg-animasi">
+        <p class="text" style="left: 10%;bottom: 10%;"></p>
+        <p class="text" style="right: 10%;top: 10%;"></p>
+     
+
+        
+
+        <div class="circle">
+          <span></span>
+        </div>
+
+        <div class="anim-3">
+          <div class="cancel-path"></div>
+        </div>
+      </div>
+      <div class="container">
+        <h4>SKILL</h4>
+        <div class="border-shape">
+          <div class="content-shape">
+            <div class="row skill">
+              <div class="col-6">
+                <ul>
+                  <li animasi-tulisan="HTML"></li>
+                  <li animasi-tulisan="CSS"></li>
+                  <li animasi-tulisan="JS"></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li animasi-tulisan="PHP"></li>
+                  <li animasi-tulisan="LARAVEL"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="page5">
+      <div class="bg-animasi">
+        <p class="text" style="left: 10%;bottom: 10%;"></p>
+        <p class="text" style="right: 10%;top: 10%;"></p>
+     
+
+        
+
+        <div class="circle">
+          <span></span>
+        </div>
+
+        <div class="anim-3">
+          <div class="cancel-path"></div>
+        </div>
+      </div>
+      <div class="container">
+        <h4>CONTACT</h4>
+        <div class="border-shape">
+          <div class="content-shape">
+            <div class="row contact">
+              <div class="col-6">
+                <ul>
+                  <li animasi-tulisan="WHATSAPP"><a href="https://wa.me/6281545419859"></a></li>
+                  <li animasi-tulisan="EMAIL"><a href="mailto:bagusindrayanaindo@gmail.com"></a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li animasi-tulisan="FACEBOOK"><a href="https://web.facebook.com/people/Good/100011408296738/"></a></li>
+                  <li animasi-tulisan="INSTAGRAM"><a href="https://www.instagram.com/bagusindrayana"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <script src="./assets/js/scroll.js"></script>
+  <script>
+
+    (function () {
+
+      document.addEventListener('wheel', function (e) {
+        scrollPage(e);
+        var page = e.target.id;
+        if(findElement("#"+page+" .bg-animasi")){
+          findElement("#"+page+" .bg-animasi").style.display = 'block';
+        }
+        setTimeout(() => {
+          animasiTulisan("[animasi-tulisan]", 100);
+        }, 500);
+      }, { passive: false });
+
+      setTimeout(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        findElement('#loading').classList.add('close');
+        findElement(".loading-text").setAttribute('animasi-tulisan', 'WELCOME');
+        animasiTulisan(".loading-text");
+        setTimeout(() => {
+          findElement(".bg-animasi").style.display = 'block';
+          findElement('#loading').style.display = 'none';
+          animasiTulisan("#page1 [animasi-tulisan]", 50);
+        }, 3500);
+      }, 4500);
+
+
+      var folderLists = document.querySelectorAll("ul.folder-list li");
+      folderLists.forEach(f => {
+
+        f.addEventListener("click", function () {
+          folderLists.forEach(ff => {
+            ff.classList.remove('selected');
+          });
+          var target = document.querySelector(this.dataset.target);
+          document.querySelectorAll(".box-content").forEach(b => {
+            b.classList.remove("active");
+          });
+          target.classList.add("active");
+          f.classList.add('selected');
+        });
+      });
+
+
+      let offetX = 0;
+      let offetY = 0;
+
+      const tooltipEl = document.querySelector("#mouse-tooltip");
+      var tooltips = document.querySelectorAll("[tooltip]");
+      tooltips.forEach(t => {
+        t.addEventListener("mouseover", function () {
+          tooltipEl.setAttribute("animasi-tulisan", t.getAttribute("tooltip"));
+          tooltipEl.style.opacity = "1";
+          offetX = tooltipEl.offsetWidth + 20;
+
+          animasiTulisan("#mouse-tooltip");
+        });
+
+        t.addEventListener("mouseout", function () {
+          tooltipEl.innerHTML = "";
+          tooltipEl.style.opacity = "0";
+        });
+      });
+
+      var navs = document.querySelectorAll("ul.side-nav li");
+      navs.forEach(nav => {
+        nav.addEventListener("click", function (e) {
+          e.preventDefault();
+          var active = document.querySelector(".active");
+          if (active) {
+            active.classList.remove("active");
+          }
+
+
+          var page = nav.getAttribute("data-page");
+          var target = document.querySelector(page);
+          verticalScroll(target, 500, 'easeInOutQuad', function () {
+            if(findElement(page+" .bg-animasi")){
+              findElement(page+" .bg-animasi").style.display = 'block';
+            }
+              
+            setTimeout(() => {
+              animasiTulisan(page+" [animasi-tulisan]", 100);
+            }, 200);
+          });
+          nav.classList.add("active");
+          target.classList.add("active");
+        });
+      });
+
+
+
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      let tooltipElX = 0;
+      let tooltipElY = 0;
+
+
+
+      let speed = 0.5;
+
+
+      function animateTooltip() {
+
+        let distX = mouseX - tooltipElX - offetX;
+        let distY = mouseY - tooltipElY;
+
+
+        tooltipElX = tooltipElX + (distX * speed);
+        tooltipElY = tooltipElY + (distY * speed);
+
+        tooltipEl.style.left = (tooltipElX) + "px";
+        tooltipEl.style.top = (tooltipElY) + "px";
+
+        requestAnimationFrame(animateTooltip);
+      }
+      animateTooltip();
+
+      document.addEventListener("mousemove", function (event) {
+        mouseX = event.pageX;
+        mouseY = event.pageY;
+      })
+
+
+      const words = [
+        "HELLO WORLD",
+        "404",
+        "WELCOME",
+        "500",
+        "ERROR",
+        "COMPLETE",
+        "JAVASCRIPT",
+        "PHP",
+        "CSS",
+        "HTML",
+        "200",
+        "LARAVEL",
+        "CODING",
+        "PROGRAMMER",
+        "WEBSITE",
+        "MOBILE",
+      ];
+
+      const texts = document.querySelectorAll(".text");
+      texts.forEach(t => {
+
+        let interval = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
+        setInterval(() => {
+          var e = t;
+          e.setAttribute('animasi-tulisan', words[Math.floor(Math.random() * words.length)]);
+          animasiTulisan(e, 50);
+        }, interval);
+      });
+
+
+      function playOnScroll(element, func = null, func2 = null) {
+        const observer = new IntersectionObserver(entries => {
+          if (func2) {
+            func2();
+          }
+          var elements = document.querySelector(element);
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('play-animation');
+              if (func) {
+                func();
+              }
+              return;
+            }
+            if (elements) {
+              elements.classList.remove('play-animation');
+            }
+          });
+
+
+
+
+        });
+
+        observer.observe(document.querySelector(element));
+      }
+
+      playOnScroll(".biodata");
+      playOnScroll(".project", function () {
+        document.querySelector(".project .loading-bar").classList.add('close');
+        setTimeout(() => {
+          document.querySelector(".project .box-content").classList.add('active');
+          document.querySelector(".project .loading-bar").style.display = 'none';
+          document.querySelector("ul.folder-list li").classList.add('selected');
+        }, 3000);
+      }, function () {
+        folderLists.forEach(ff => {
+          ff.classList.remove('selected');
+        });
+        document.querySelector(".project .loading-bar").classList.remove('close');
+        document.querySelector(".project .loading-bar").style.display = 'block';
+        document.querySelectorAll(".box-content").forEach(b => {
+          b.classList.remove("active");
+        });
+      });
+
+
+
+    })();
+
+
+
+    function findElement(query) {
+      return document.querySelector(query);
+    }
+
+    function findElements(query) {
+      return document.querySelectorAll(query);
+    }
+
+
+
+    function animasiTulisan(params = '[animasi-tulisan]', speed = 100) {
+      let elements = [];
+      if (params.nodeType && params.nodeType === Node.ELEMENT_NODE) {
+        elements = [params];
+      } else {
+        elements = findElements(params);
+      }
+
+      elements.forEach(function (el) {
+        var a = el.querySelector('a');
+       
+        const tulisan = el.getAttribute("animasi-tulisan");
+        if(a){
+          a.innerHTML = "";
+        } else {
+          el.innerHTML = '';
+        }
+        
+        if (tulisan == "" || tulisan == null || tulisan == ",") {
+          return;
+        }
+        const tulisanArray = tulisan.split("");
+        const finalTulisanArray = tulisan.split("");
+
+        var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var numbers = "0123456789"
+        var string = numbers + letters;
+
+
+        for (let i = 0; i < tulisanArray.length; i++) {
+          const span = document.createElement("span");
+          span.setAttribute("data-final", tulisanArray[i]);
+          span.innerHTML = string.charAt(Math.random() * string.length);
+          
+          if(a){
+            a.appendChild(span);
+          } else {
+            el.appendChild(span);
+          }
+        }
+        var allCounters = [];
+        if(a){
+          allCounters = a.querySelectorAll("span");
+        } else {
+          allCounters = el.querySelectorAll("span");
+        }
+        
+
+
+        allCounters.forEach(function (el2) {
+          var final = el2.getAttribute("data-final");
+          if (final != " ") {
+            var duration = speed + Array.from(allCounters).indexOf(el2) * speed;
+            var interval = setInterval(function () {
+              el2.innerText = string.charAt(Math.random() * string.length);
+              duration = duration - speed;
+              if (duration <= 0) {
+                clearInterval(interval);
+                el2.innerText = final;
+              }
+            }, speed);
+          } else {
+            el2.innerText = " ";
+          }
+        });
+
+      });
+
+    }
+
+    setTimeout(() => {
+      animasiTulisan(".loading-text");
+    }, 2000);
+  </script>
 </body>
 
 </html>
