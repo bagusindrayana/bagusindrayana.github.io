@@ -623,7 +623,7 @@ footer {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     text-align: center;
 }
@@ -636,7 +636,7 @@ footer .container {
     transition: opacity 0.8s ease;
     width: 75%;
     z-index: 10;
-    margin-top: -50px;
+    
 }
 
 section.active .container {
@@ -1853,8 +1853,8 @@ ul.side-nav li.active a span {
     min-height: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: unset;
+    align-items: unset;
 }
 
 .biodata ul li {
@@ -1972,7 +1972,7 @@ ul.side-nav li.active a span {
     display: block;
     width: 64px;
     height: 64px;
-    margin: 8px;
+    /* margin: 8px; */
     border-radius: 50%;
     border: 12px solid #fff;
     border-color: #fff transparent #fff transparent;
@@ -2240,6 +2240,7 @@ ul.folder-list li {
     align-items: center;
     flex-direction: column;
     padding: 5px;
+    font-size: 0.7rem;
 }
 
 .box-content .list-item img {
@@ -2300,6 +2301,10 @@ ul.folder-list li {
 }
 
 .contact.row .col-6 ul li {
-    font-size: 1rem;
+    font-size: 0.8rem;
     list-style: disc;
+}
+
+#page4,#page5 {
+    justify-content: center;
 }

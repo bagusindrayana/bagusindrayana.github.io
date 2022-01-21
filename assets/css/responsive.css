@@ -118,6 +118,24 @@
         margin:10px;
 
     }
+
+    .biodata .col-4 {
+       
+        display: block;
+        justify-content: unset;
+        align-content: unset;
+        align-items: unset;
+     
+        
+    }
+    
+    .biodata .col-8 {
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+    }
+
     body {
         letter-spacing: 5px;
     }
@@ -303,21 +321,10 @@
         
     }
 
-    .biodata .col-4 {
-       
-        display: block;
-        justify-content: unset;
-        align-content: unset;
-        align-items: unset;
-     
-        
-    }
     
-    .biodata .col-8 {
-        display: block;
-        flex-direction: unset;
-        justify-content: unset;
-        align-items: unset;
+
+    .box-content .list-item {
+        font-size: 1.2rem;
     }
     
 }
