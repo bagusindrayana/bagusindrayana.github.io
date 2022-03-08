@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
         
-    const scrollPage = new ScrollPage("#full-page",{menu:"#menu",scrollBar:true});
+    const scrollPage = new ScrollPage("#full-page",{menu:"#menu"});
     scrollPage.onScroll(function(e){
         var page = e.nextPageName;
         if (findElement("#" + page + " .bg-animasi")) {
