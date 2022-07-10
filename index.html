@@ -209,7 +209,7 @@
                     <li>
                       ADDRESS : <span animasi-tulisan="SAMARINDA, EAST KALIMANTAN">.........</span>
                     </li>
-  
+
                   </ul>
                 </div>
                 <div class="box">
@@ -303,34 +303,26 @@
                     </div>
                   </div>
                   <div class="box-content" id="project-web">
-                    <a href="https://isometric-web.netlify.app/" target="_blank" class="list-item"
-                      style="background-image: url('./assets/images/web_isometric.png');"
-                      tooltip="ISOMETRIC WEB DESIGN">
-
-                    </a>
-                    <a href="https://laravel-maps-demo.herokuapp.com/" target="_blank" class="list-item"
-                      style="background-image: url('./assets/images/laravel_maps_demo.png');"
-                      tooltip="LARAVEL MAPS DEMO">
-
-                    </a>
+                    <img class="list-item" src="./assets/images/web_isometric.png" tooltip="ISOMETRIC WEB DESIGN" onclick="openModalImage(this)" alt="Website Dengan Desain Isomteric 3D"/>
+             
+                    <img class="list-item" src="./assets/images/laravel_maps_demo.png" tooltip="LARAVEL MAPS DEMO" onclick="openModalImage(this)" alt="Website Demo Untuk Library Laravel Maps"/>
+                  
+                    <img class="list-item" src="./assets/images/kasir.png" tooltip="KASIR" onclick="openModalImage(this)" alt="Aplikasi Kasir & Inventory"/>
+                    <img class="list-item" src="./assets/images/peta.png" tooltip="PETA" onclick="openModalImage(this)" alt="Website Untuk Memetakan Lokasi"/>
+                    <img class="list-item" src="./assets/images/absensi.png" tooltip="ABSENSI" onclick="openModalImage(this)" alt="Aplikasi Absesi Karyawan Berbasis GPS"/>
+                    <img class="list-item" src="./assets/images/prediksi_kemiskinan.png" tooltip="PREDIKSI KEMISKINAN" onclick="openModalImage(this)" alt="Prediksi Jumlah Penduduk Miskin Dengan Metode Double Exponential Smoothing"/>
+                  
 
                   </div>
                   <div class="box-content" id="project-mobile">
-                    <a href="https://github.com/bagusindrayana/notes_lites" target="_blank" class="list-item"
-                      style="background-image: url('./assets/images/notes_lite.png');" tooltip="NOTES LITE">
-
-                    </a>
+                    <img class="list-item" src="./assets/images/notes_lite.png" tooltip="NOTES LITE" onclick="openModalImage(this)" alt="Aplikasi Note Sederhana Dibuat Dengan Flutter"/>
+                    
                   </div>
                   <div class="box-content" id="project-game">
-                    <a href="https://gamejolt.com/games/EscapeLabyrinth/274630" target="_blank" class="list-item"
-                      style="background-image: url('./assets/images/escape_labyrinth.webp');"
-                      tooltip="ESCAPE LABYRINTH">
+                    <img class="list-item" src="./assets/images/escape_labyrinth.webp" tooltip="ESCAPE LABYRINTH" onclick="openModalImage(this)" alt="Game Horor Sederhana Dibuat Dengan Unity3D"/>
 
-                    </a>
-                    <a href="https://gamejolt.com/games/box-dungeon/467487" target="_blank" class="list-item"
-                      style="background-image: url('./assets/images/box_dungeon.webp');" tooltip="BOX DUNGEON">
-
-                    </a>
+                    <img class="list-item" src="./assets/images/box_dungeon.webp" tooltip="BOX DUNGEON" onclick="openModalImage(this)" alt="Game Dungeon Crawler Sederhana Dibuat Dengan Unity3D"/>
+                    
                   </div>
                   <div class="box-content" id="project-library">
                     <a href="https://github.com/bagusindrayana/laravel-maps" target="_blank" class="list-item"
@@ -353,9 +345,9 @@
       <div class="bg-animasi">
         <p class="text" style="left: 10%;bottom: 1%;"></p>
         <p class="text" style="right: 10%;top: 1%;"></p>
-     
 
-        
+
+
 
         <div class="circle">
           <span></span>
@@ -392,9 +384,9 @@
       <div class="bg-animasi">
         <p class="text" style="left: 10%;bottom: 1%;"></p>
         <p class="text" style="right: 10%;top: 1%;"></p>
-     
 
-        
+
+
 
         <div class="circle">
           <span></span>
@@ -417,7 +409,8 @@
               </div>
               <div class="col-6">
                 <ul>
-                  <li animasi-tulisan="FACEBOOK"><a href="https://web.facebook.com/people/Good/100011408296738/"></a></li>
+                  <li animasi-tulisan="FACEBOOK"><a href="https://web.facebook.com/people/Good/100011408296738/"></a>
+                  </li>
                   <li animasi-tulisan="INSTAGRAM"><a href="https://www.instagram.com/bagusindrayana"></a></li>
                 </ul>
               </div>
@@ -429,7 +422,12 @@
 
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/scrollpage-js/scrollpage.min.js"></script>
+  <div id="myModal" class="modal">
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <script src="./assets/js/scrollpage.js"></script>
   <script src="./assets/js/scripts.js"></script>
 </body>
 

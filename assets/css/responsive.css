@@ -204,7 +204,7 @@
     }
 
     .box-content .list-item {
-        width: calc(25% - 15px);
+        width: calc(25% - 25px);
         height: 200px;
 
     }
