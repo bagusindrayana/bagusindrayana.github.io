@@ -73,6 +73,7 @@ class ScrollPage {
                     _this.scrollListener(e);
                 }
             }, { passive: options?.passive ?? false });
+            
 
             e.addEventListener('touchstart', function(event) {
                 
@@ -848,10 +849,12 @@ class ScrollPage {
                 item.addEventListener('click',(e)=>{
                     e.preventDefault();
                     _this.moveTo(item.getAttribute('data-page'));
+                    this.scrollCallback(this.responseCallback());
                 });
                 if ('ontouchstart' in window) {
                     item.addEventListener("touchstart", function(e) {
                         _this.moveTo(item.getAttribute('data-page'));
+                        this.scrollCallback(this.responseCallback());
                       
                     });
                 }
@@ -873,6 +876,7 @@ class ScrollPage {
                 if(href.includes("#") && href !== "#"){
                     e.preventDefault();
                     _this.moveTo(href);
+                    this.scrollCallback(this.responseCallback());
                 }
             });
         }
